@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #52d7e9;
+            color: #f52e2e;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            background-color: #52d7e9;
+            color: #f52e2e;
+        }
+
+        header p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        .about, .projects, .contact {
+            padding: 40px 0;
+            background-color: #52d7e9;
+            color: #f52e2e;
+        }
+
+        .projects .project {
+            margin-bottom: 20px;
+            background-color: #52d7e9;
+            color: #f52e2e;
+        }
+
+        footer {
+            background-color: #df0fab;
+            color: #9ddb0c;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>PRATHEESWAR C - Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="aa.jpg" alt="Your Name's Profile Photo" class="profile-photo">
+            <h1>PRATHEESWAR C</h1>
+            <p>Web Developer</p>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm a passionate web developer with experience in HTML, CSS, and JavaScript.
+                I love creating responsive and user-friendly websites.<BR>
+                    "I am a dedicated and creative web developer with a strong foundation in HTML, CSS, and JavaScript. With a keen eye for design and a passion for crafting seamless user experiences, I am committed to delivering high-quality websites that not only meet but exceed client expectations. Through continuous learning and a proactive approach, I strive to stay ahead in the ever-evolving field of web development, ensuring innovative and effective solutions for every project I undertake."
+
+
+<BR>
+
+
+
+            </p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>SWQMS</h3>
+                <p>THE PROJECT IS BASED ON QUALITY OF DRINKING WATER.</p>
+            </div>
+            <div class="project">
+                <h3>Internship</h3>
+                <p>web developer intern at sample companies</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact:9489881308</h2>
+            <p>Email: ceswar12345@example.com</p>
+            <p>GitHub: pratheeswar-c</p>
+            <p>LinkedIn: linkedin.com/in/yourusername</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pratheeswar. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
