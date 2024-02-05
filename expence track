@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #5ec7ad;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #c70df5;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 5px;
+      padding: 8px;
+      background-color: #d3d3d3;
+      border-radius: 4px;
+    }
+
+    #totalExpense {
+      font-weight: bold;
+      color: #2ecc71; /* Changed color for total expense */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 style="color: #3498db;">Expense Tracker</h2>
+    <input type="text" id="expenseInput" placeholder="Enter expense">
+    <button onclick="addExpense()">Add Expense</button>
+    <ul id="expenseList"></ul>
+    <p>Total Expense: $<span id="totalExpense">0.00</span></p>
+  </div>
+
+  <script>
+    var totalExpense = 0;
+
+    function addExpense() {
+      var expenseInput = document.getElementById("expenseInput");
+      var expenseList = document.getElementById("expenseList");
+      var totalExpenseElement = document.getElementById("totalExpense");
+
+      if (expenseInput.value.trim() !== "") {
+        var expenseAmount = parseFloat(expenseInput.value);
+        if (!isNaN(expenseAmount)) {
+          var li = document.createElement("li");
+          li.style.backgroundColor = getRandomColor();
+          li.appendChild(document.createTextNode(expenseInput.value));
+          expenseList.appendChild(li);
+
+          totalExpense += expenseAmount;
+          totalExpenseElement.textContent = totalExpense.toFixed(2);
+
+          expenseInput.value = "";
+        } else {
+          alert("Please enter a valid expense amount.");
+        }
+      }
+    }
+
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+  </script>
+
+</body>
+</html>
